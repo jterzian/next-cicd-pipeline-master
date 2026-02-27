@@ -8,7 +8,7 @@ Projeto demonstrando:
 - Deploy com GitHub Pages
 
 ### 🔗 Site publicado
-https://SEUUSUARIO.github.io/NOME-DO-REPO/
+https://jterzian.github.io/next-cicd-pipeline-master/
 
 ### 🔗 Repositório
-https://github.com/SEUUSUARIO/NOME-DO-REPO
+https://github.com/jterzian/next-cicd-pipeline-master
