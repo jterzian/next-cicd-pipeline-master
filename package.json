@@ -1,11 +1,10 @@
 {
-  "name": "next-cicd-pipeline",
+  "name": "next-ci-cd-pipeline",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
+    "build": "next build",
     "lint": "next lint",
     "test": "vitest",
     "test:ci": "vitest run"
