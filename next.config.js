@@ -1,9 +1,8 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Isso gera a pasta 'out' com arquivos estáticos
+  output: "export",
   images: {
-    unoptimized: true, // Necessário para o GitHub Pages
-  },
-}
+    unoptimized: true
+  }
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
