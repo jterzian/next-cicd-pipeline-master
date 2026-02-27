@@ -3,11 +3,8 @@ name: CI/CD Pipeline
 on:
   push:
     branches: [ main ]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -24,7 +21,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Lint
         run: npm run lint
@@ -34,6 +31,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /next-cicd-pipeline-master
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -41,7 +40,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './out' # Pasta gerada pelo 'output: export' do Next
+          path: ./out
 
       - name: Deploy to GitHub Pages
         id: deployment
